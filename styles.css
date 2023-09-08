@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #111;
+    color: aliceblue;
+}
+
 /* Estilo do cabeçalho */
 header {
     background-color: black;
@@ -19,15 +25,16 @@ header {
 h1 {
     font-size: 36px;
     /* Tamanho da fonte de 36 pixels */
+    text-align: left;
+    color: red;
 }
 
 /* Estilo da seção de filmes */
 .row {
+    color: white;
     margin: 30px;
     /*  Espaçamento interno superior e inferior de 30px, sem espaçamento horizontal.*/
-    max-width: 1200px;
-    /*  1200px = largura da tela - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra*/
-    padding: 0 20px;
+       padding: 0 20px;
     /* Espaçamento interno esquerdo e direito de 10px, sem espaçamento horizontal */
 }
 
@@ -40,31 +47,57 @@ h2 {
 
 /* Estilo dos posteres de filmes */
 .row-posters {
-    display: flex;/* Usar flexbox para alinhar os pôsteres horizontalmente */
-    overflow-x: scroll;/* Adicionar rolagem horizontal caso haja muitos pôsteres */
-    gap: 20px; /* Espaçamento entre os pôsteres de 20px */
+    
+    display: flex;
+    /* Usar flexbox para alinhar os pôsteres horizontalmente */
+    overflow-x: scroll;
+    /* Adicionar rolagem horizontal caso haja muitos pôsteres */
+    overflow-y: hidden;
+    /* Adicionar rolagem vertical caso haja muitos pôsteres */
+    padding: 20px;
+    /* Espaçamento interno esquerdo e direito de 20px, sem espaçamento horizontal */
+    gap: 20px;
+    /* Espaçamento entre os pôsteres de 20px */
 }
 
 .row-poster {
-    max-height: 200px;/* Altura máxima dos pôsteres de 200px */
-    object-fit: cover; /* Redimensionar e cortar os pôsteres para preencher o espaço */
-    border-radius: 8px; /* Bordas arredondadas de 8px */
-    transition: transform 0.3s ease; /* Adicionar uma transição suave de transformação */
-    
+    width: 100%;
+    /* 100% = largura da tela - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da barra de rolagem - largura da b*/
+    max-height: 200px;
+    /* Altura máxima dos pôsteres de 200px */
+    object-fit: contain;
+    /* Redimensionar e cortar os pôsteres para preencher o espaço */
+
+    /* Espaçamento interno esquerdo e direito de 10px, sem espaçamento horizontal */
+    border-radius: 8px;
+    /* Bordas arredondadas de 8px */
+    transition: transform 450ms;
+    /* Adicionar uma transição suave de transformação */
 }
 
 .row-poster:hover {
-    transform: scale(1.08); /* Ampliar em 8% quando o mouse passa sobre um pôster */
+    transform: scale(1.08);
+    /* Ampliar em 8% quando o mouse passa sobre um pôster */
 }
 
+.row-posters::-webkit-scrollbar{
+    display: none;
+    /* Esconder a barra de rolagem */
+}
+
+
 /* Estilo específico para os pôsteres grandes */
-.row-posterLarge{
-    width: 200px; /* Largura dos pôsteres grandes */
-    height: 300px; /* Altura dos pôsteres grandes */
+.row-posterLarge {
+    width: 200px;
+    /* Largura dos pôsteres grandes */
+    height: 300px;
+    /* Altura dos pôsteres grandes */
 }
 
 /* Estilo específico para os pôsteres pequenos */
 .row-posterSmall {
-    width: 400px; /* Largura dos pôsteres pequenos */
-    height: 225px; /* Altura dos pôsteres pequenos */
+    width: 200px;
+    /* Largura dos pôsteres pequenos */
+    height: 125px;
+    /* Altura dos pôsteres pequenos */
 }
