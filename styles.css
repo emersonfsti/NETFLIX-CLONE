@@ -28,31 +28,35 @@ h1 {
     text-align: left;
     color: red;
 }
-
-.netflix-logo{
-    width: 150px;
-
+/* Estilo do logotipo da Netflix */
+.netflix-logo {
+    width: 150px; /* Largura do logotipo */
 }
 
-.banner{
-    background-image: url('./imagens/banner.jpg');
-    background-size: cover;
-    background-position: center center;
-    color: white;
-    object-fit: contain;
-    height: 448px;
+/* Estilo do banner principal */
+.banner {
+    background-image: url('./imagens/banner.jpg'); /* Imagem de fundo do banner */
+    background-size: cover; /* Cobrir todo o elemento com a imagem */
+    background-position: center center; /* Centralizar a imagem horizontal e verticalmente */
+    color: white; /* Cor do texto no banner */
+    object-fit: contain; /* A imagem é dimensionada para caber no contêiner */
+    height: 448px; /* Altura do banner */
 }
 
-.banner-contents{
-    margin-left: 30px;
-    padding-top: 190px;
-    height: 190px;
+/* Estilo do conteúdo dentro do banner */
+.banner-contents {
+    margin-left: 0; /* Remova a margem à esquerda */
+    padding-left: 30px; /* Adicione o espaçamento à esquerda para posicionar o conteúdo */
+    padding-top: 190px; /* Espaçamento superior para posicionar o conteúdo */
+    height: 190px; /* Altura do conteúdo dentro do banner */
+    text-align: left;
 }
 
-.banner-title{
-    font-size: 3rem;
-    font-weight: 800;
-    padding-bottom: 0.3rem;
+/* Estilo do título no banner */
+.banner-title {
+    font-size: 3rem; /* Tamanho da fonte do título */
+    font-weight: 800; /* Peso da fonte (negrito) */
+    padding-bottom: 0.3rem; /* Espaçamento inferior do título */
 }
 
 /* Estilo da seção de filmes */
